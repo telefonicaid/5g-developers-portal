@@ -1,9 +1,11 @@
 # Telefónica Tech IoT and Device Manufacturers
 
+![enter image description here](https://raw.githubusercontent.com/telefonicaid/5g-developers-portal/master/app-business-connection-221185.R.jpg)
 ## Register
 
 If you want to get our latest news, please [register in our website](https://iot.telefonica.com/en/contact/).
 
+![enter image description here](https://raw.githubusercontent.com/telefonicaid/5g-developers-portal/master/adult-agency-analyzing-1056557.R.jpg)
 ## Develop
 
 [Developer connectivity.](https://iot.telefonica.com/en/contact/) If you want to use Telefónica connectivity in your development, test or small project you can buy  SIMs through our local partners. If you are part of a start-up or SME our [IoT Activation initiative](https://iotactivation.wayra.co/) can boost your IoT solution development and accelerate your time to market.
@@ -14,6 +16,7 @@ If you want to get our latest news, please [register in our website](https://iot
 
 [Device on Boarding](https://iot.telefonica.com/en/contact/). Telefónica  offers customers and manufacturers a device onboarding service. An extensive test set warrantees the device compatibility with Telefónica  network.
 
+![enter image description here](https://raw.githubusercontent.com/telefonicaid/5g-developers-portal/master/inbal-marilli-3425-unsplash.R.jpg)
 ## Partner
 
 [IoT  Partner Program](https://partners.telefonica.com/). The IoT Partners Programme empowers our Partners, including Device Manufacturers to sell on/distribute their devices with the assurance of Telefonica connectivity inside and manage their SIMs, prices and coverage from our transactional customer facing portals, anytime, anywhere.
