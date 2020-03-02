@@ -4,7 +4,7 @@
 
 # IoT <small> 5G </small>
 
-[ Developers portal ](iotmanufacturers.md)
+[ Developers portal ](references.md)
 
 <!-- background image -->
 
