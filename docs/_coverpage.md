@@ -2,10 +2,10 @@
 
 ![logo](https://www.telefonica.com/telefonica-theme/images/dFront/modules/mod_footer/logo_telefonica_azul.png)
 
-# IoT Activation Programme <small>Beyond Connectivity</small>
+# IoT <small> 5G </small>
 
-[Welcome to the RevoluIoTn](IoT_basic.md)
+[ Developers porta ](iotmanufacturers.md)
 
 <!-- background image -->
 
-![](pictures/miscellaneous/bg.jpg)
+![](adult-agency-analyzing-1056557.R.jpg)
