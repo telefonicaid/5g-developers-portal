@@ -50,9 +50,8 @@ Mobile IoT connectivity has now been deployed across Europe, North America and E
 
 ### Selecting a technology: LTE-M vs NBIoT
 
-!!!!!!!!!!!!!!!!!![logoss ]  ltem_logo.png
-
-nb_logo.png
+![pick](pictures/ltem_logo.png)
+![pick](pictures/nb_logo.png)
 
 LTE-M extends LTE with features for improved support for Machine-Type Communications (MTC) and IoT.
 The objective of LTE-M was to bring down the LTE device cost substantially to make LTE attractive for low end MTC applications that have so far been
@@ -89,7 +88,13 @@ There are a set of techniques that can be used in order to optimize the power co
 
 These functionalities are directly related with the status of the RRC link. AS you can see in the following figure there are four different status. RRC Connected, RRC Idle, PSM and Power Off.
 
-!!!!!!! limited_power_consumption.png
+
+<p align="center">
+	<a align="center">
+		<img src="pictures/limited_power_consumption.png">
+	</a>
+</p>
+[pic](pictures/limited_power_consumption.png)
 
 A UE is in RRC_CONNECTED when an RRC connection is established. If no RRC connection is established the UE is in RRC_IDLE mode. When the device is in IDLE state, it is only listening to control channel broadcasts, such as paging notifications of inbound traffic, or connected, in which case the network has an established context and resource assignment for the client. When in RRC_IDLE, the device cannot send or receive any data. To do so, it must first synchronize itself to the network by listening to the network broadcasts and then issue a request to the RRC to be moved to the RRC_CONNECTED.
 Once in a RRC_CONNECTED, a network context is established between the radio tower and the device, and data can be transferred. However, once either side completes the intended data transfer after a certain time of inactivity the device goes back to RRC_IDLE.
@@ -137,6 +142,7 @@ UE is paged for DL traffic but for UL traffic the UE will no longer be in IDLE s
 		<img src="pictures/limited_power_consumption_idrx.png">
 	</a>
 </p>
+![pick](pictures/limited_power_consumption_idrx.png)
 
 In LTE, just as in most other modern wireless standards, there are shared uplink and downlink radio channels, the access to which is controlled by the RRC. 
 When in a RRC_CONNECTED state, the RRC tells each and every device which timeslots are assigned to whom, which transmit power must be used, modulation, 
@@ -149,6 +155,7 @@ Consequently, when in a DRX state, the device is synchronized to the RRC, but no
 		<img src="pictures/limited_power_consumption_idrx_t.png">
 	</a>
 </p>
+![pick](pictures/limited_power_consumption_idrx_t.png)
 
 ### C-DRX
 This feature allow the UE to optimize its power consumption while active wait of incoming messages is being performed. 
@@ -273,3 +280,307 @@ As is clear from the figure above, the value of the PSM is limited by the utilis
 
 
 ## Release Assistance
+
+The purpose of the Release Assistance indication is to inform the network whether:
+-	No futher uplink or downlink data transmission is expected
+-	Only a single downlink data transmission and no further uplink data transmission subsequent to the uplink data transmission is expected.
+
+So after one of these two cases the device enters directly into RRC_IDLE avoiding to stay in RRC_CONNECTED status during the Inactivity Timer interval. 
+The amount of energy that can be saved using this optimization can enable even more battery constrained use cases.
+
+When a UE transmits data in uplink, the NAS signaling message encapsulating the data packet can include a Release Assistance Information (RAI) field. 
+This RAI field allows the UE to notify the MME if no further uplink or downlink data transmissions are expected, 
+or only a single downlink data transmission subsequent to this uplink data transmission is expected. In such case, 
+the MME can immediately trigger the S1 Release procedure (unless user plane bearers between eNB and Serving Gateway (SGW) are established). 
+Hence, the RAI field enables the MME to reduce the period the UE is in DRX waiting for possible additional transmissions.
+
+![pick](pictures/release_assistance.png)
+
+In such a way the module can optimize its power consumption avoiding to lose time and energy waiting for incoming packets, during the inactivity timer.
+
+![pick](pictures/release_assistance_t.png)
+
+
+## Timers summary
+
+![pick](pictures/timers_summary.png)
+
+- **T3412: **
+The module perform a TAU (Tracking Area Update) procedure. This value is proposed by the UE to the network, which is usually accepted but when this value is out of EPC limits the network will set a default value.
+
+- **T3324: **
+The module stays in RRC Idle (DRX or eDRX) waiting for an incoming packet. This value is controlled by the UE.
+
+- **T3412 - T3324: **
+The module is in PSM mode, its current consumption is in the microamperes scale and the module is not reachable. 
+
+- **eDRX Cycle: **
+Time between paging windows the following table shows the available values in seconds. This value is negotiated between the module and the network.
+
+![pick](pictures/table_eDRX_Cycle.png)
+
+- **Paging Window: **
+The module is reachable during this time while in eDRX mode. These are the available values in seconds. This time in controller by the network.
+
+![pick](pictures/table_Paging_Window.png)
+
+- **Inactivity Timer: **
+This timer is reset each the UE has an incoming or outcoming packet to/from the network. The module should stay in RRC Connected during this time after the last communication before entering RRC Idle. This timer is controlled by the network.
+
+- **DRX period: **
+Time between pagings in NBIoT (2,56s) and LTE-M (1,28s). This timer is controlled by the network.
+
+
+## Coverage enhancement
+
+Some IoT applications require devices to be positioned in areas that are not readily accessible by radio coverage, 
+such as underground parking garages and in ground pits. The 3GPP Enhanced Coverage feature is an integral characteristic of NB-IoT and LTE-M, 
+as it increases the deptxh of radio coverage to enable IoT devices to operate in locations that would otherwise not be possible.
+
+In NBIoT there are up to three different Coverage Levels signalled via SIB2-NB:
+
+![pick](pictures/table_Coverage_Enhancement_nb.png)
+
+The coverage level selected determines the NPRACH resources to use (subset of subcarriers, PRACH Repetitions, Max number of attempts, etc…) UE derives the Coverage Level based on NRSRP measured.
+
+In LTE-M two Coverage Enhance modes are enabled: Mode A and Mode B. The Operation mode is determined by eNB (informed to UE via RRC message). Thus, the Level within each Mode is determined by UE. (based on the reference signal power (RSRP) it measure and inform it to eNB by PRACH resource (frequency,time, preamble) it uses.)
+As per agreement, the connected UE can opérate in Mode A and mode B. These modes are configured by the eNB when entering RRC_CONNECTED, 
+there are two levels in eacn CE Mode:
+
+![pick](pictures/table_Coverage_Enhancement_lte.png)
+
+- CE Mode A: No repetition or small number of repetition. It has an equivalent coverage that of UE Cat 1.
+- CE Mode B: Large number of repetition. It has coverage enhancement up to 15dB in comparisons with UE Cat 1.
+
+## Connection architectures
+
+This part is intended to clarify the connection planes. As LTE-M and NBIoT have evolved from LTE they inherit the user & control plane. But in order to improve its battery lifetime, latency, etc. some optimizations has been made.
+First of all, let’s clarify the two plane main functions then the optimizations.
+
+### Connection Plane
+The radio protocol architecture for LTE can be separated into control plane architecture and user plane architecture as shown below:
+
+![pick](pictures/diagram_architecture_connection_plane.png)
+
+At user plane side, the application creates data packets that are processed by protocols such as TCP, UDP and IP, while in the control plane, the radio resource control (RRC) protocol writes the signalling messages that are exchanged between the base station and the mobile. 
+In both cases, the information is processed by the packet data convergence protocol (PDCP), the radio link control (RLC) protocol and the medium access control (MAC) protocol, before being passed to the physical layer for transmission.
+
+### User Plane
+The user plane protocol stack between the eNodeB and UE consists of the following sub-layers:
+- PDCP (Packet Data Convergence Protocol)
+- RLC (radio Link Control)
+- Medium Access Control (MAC)
+
+On the user plane, packets in the core network (EPC) are encapsulated in a specific EPC protocol and tunneled between the P-GW and the eNodeB. Different tunneling protocols are used depending on the interface. GPRS Tunneling Protocol (GTP) is used on the S1 interface between the eNodeB and S-GW and on the S5/S8 interface between the S-GW and P-GW.
+
+![pick](pictures/diagram_architecture_user_plane.png)
+
+Packets received by a layer are called Service Data Unit (SDU) while the packet output of a layer is referred to by Protocol Data Unit (PDU) and IP packets at user plane flow from top to bottom layers.
+
+### Control Plane
+The control plane includes additionally the Radio Resource Control layer (RRC) which is responsible for configuring the lower layers.
+The control plane handles radio-specific functionality that depends on the state of the user equipment that includes two states: idle or connected.
+
+- **Idle: **
+The user equipment camps on a cell after a cell selection or reselection process where factors like radio link quality, cell status and radio access technology are considered. The UE also monitors a paging channel to detect incoming calls and acquire system information. In this mode, control plane protocols include cell selection and reselection procedures.
+- **Connected: **
+The UE supplies the E-UTRAN with downlink channel quality and neighbour cell information to enable the E-UTRAN to select the most suitable cell for the UE. In this case, control plane protocol includes the Radio Link Control (RRC) protocol.
+
+The protocol stack for the control plane between the UE and MME is shown below. The grey region of the stack indicates the access stratum (AS) protocols. The lower layers perform the same functions as for the user plane with the exception that there is no header compression function for the control plane.
+
+![pick](pictures/diagram_architecture_control_plane.png)
+
+### User Plane optimization
+The alternative data transmission procedure optimization is UP. It requires an initial RRC connection establishment that configures the radio bearers and the AS security context in the network and UE. After this, UP enables the RRC connection to be suspended and resumed by means of two new control procedures: Connection Suspend and Resume. The support of this optimization is optional for NB-IoT UEs. 
+
+![pick](pictures/diagram_architecture_user_plane_optimization.png)
+
+When the UE transits to RRC Idle state, the Connection Suspend procedure enables to retain UE’s context at the UE, eNB, and MME. Later, when there is new traffic, the UE can resume the connection. To resume the RRC connection, the UE provides a Resume ID to be used by the eNB to access the stored context. By means of preserving the UE context instead of release it, the UE avoids AS security setup and RRC reconfiguration in each data transfer, compared to conventional SR procedure. As the UP optimization utilizes the usual user plane connectivity, subsequent data packets can be transferred through the data paths. Therefore, UP is suitable for short or large data transactions.
+
+### Control Plane optimization
+Today in LTE when the UE needs to send uplink data while in EMM-IDLE state, it has to send a Service Request to the core network, which then triggers radio bearer establishment and setup of S1U GTPU tunnel between eNB and SGW (which involves a Modify Bearer Request signaling from MME to SGW). 
+
+For battery constrained IoT devices that need to send uplink data once in a week or a month and that too a small payload, such elaborate signaling procedures are a waste of unnecessary signaling and energy (battery drain). Instead its much simpler and efficient to send the small data payload over the control plane signaling and let MME that receives the small data over NAS (control plane) send the data to SGW.
+
+![pick](pictures/diagram_architecture_control_plane_optimization.png)
+
+--This optimization uses the control plane to forward the UE’s data packets.-- 
+To do that, the data packets are sent encapsulated in Non Access Stratum (NAS) signaling messages to the MME (messages 5 and 6 of Figure 3). For NB-IoT UEs, the support of this procedure is mandatory. Since CP uses control plane to forward data packets, the transmission or reception of messages is sent as NAS signaling messages between the UE and MME. Compared to conventional SR procedure, the UE avoids AS security setup and user plane bearers establishment required in each data transfer. Hence, it is more suitable for short data transactions. When a UE transmits data in uplink, the NAS signaling message encapsulating the data packet can include a Release Assistance Information (RAI) field. This RAI field allows the UE to notify the MME if no further uplink or downlink data transmissions are expected, or only a single downlink data transmission subsequent to this uplink data transmission is expected. In such case, the MME can immediately trigger the S1 Release procedure (unless user plane bearers between eNB and Serving Gateway (SGW) are established). Hence, the RAI field enables the MME to reduce the period the UE is in DRX waiting for possible additional transmissions. Unfortunately, CP does not currently allow the application servers to notify the MME if no further data transmissions are expected.
+
+
+## Communication Protocols: Network Protocols
+
+### IP
+As LTE-M and NBIoT have been developed as an evolution of LTE, but taking into account the requirements of IoT cellular communication. It’s an ALL IP solution thus all protocols an data transmission are performed over IP network layer.
+
+### Non-IP
+The standard defines Non IP Access. The support of Non-IP Data Delivery (NIDD) is part of the CIoT EPS optimizations. As you can see in the figure below there are two ways to reach an IoT Platform using NonIP communication, via PGW or via SCEF.
+
+![pick](pictures/communication_protocols_network_protocols.png)
+
+- Black line represents IP/NonIP data delivery using User Plane. 
+- Red line represents IP/NonIP data delivery using Control Plane CIoT Optimization
+- Orange line represents NonIP data delivery vía SCEF.
+
+SCEF provides:
+SMALL DATA TRANSFERS INTERFACE. SCEF is the interface for small data transfers and control messaging between Enterprises and the Operators Core Network.
+EXPOSE NETWORK CAPABILITIES VIA API. SCEF can communicate monitoring events to the customer ASs:
+- UE reachability
+- UE loss of connectivity
+- Location of the UE
+- Change location…
+
+Telefonica IoT networks already have NIDD vía PGW available. SCEF deployment is in the roadmap, but it is not available.
+
+## Communication Protocols: Transport Protocols
+
+### TCP
+The transport layer in the TCP/IP architecture provides congestion control and reliable delivery, both of which are implemented by TCP, the dominant transport layer protocol on the Internet. TCP has been engineered for many years to efficiently deliver a large bulk of data over a long-lived point-to-point connection without stringent latency requirement. It models the communication as a byte stream between sender and receiver, and enforces reliable in-order delivery of every single byte in the stream.
+However, IoT applications usually face a variety of communication patterns which TCP cannot support efficiently:
+- Due to the energy constraints, devices may frequently go into sleep mode, thus it is infeasible to maintain a long-lived connection in IoT applications.
+- A lot of IoT communication involves only a small amount of data, making the overhead of establishing a connection unacceptable.
+- Some applications (e.g., device actuation) may have low-latency requirement, which may not tolerate the delay caused by TCP handshaking.
+
+### UDP
+Because there is no connection setup, UDP is faster than TCP and results in less network traffic. In addition it doesn’t consume resources on the receiving machine as it doesn’t hold a connection open.
+UDP it’s recommended for IoT aplications in comparision with TCP because the TCP’s packet acknowledgment and retransmission features are useless overhead for those applications. If a piece of does not arrive at its destination in time, there is no point in retransmitting the packet as it would arrive out of sequence and garble the message.
+Also as the size of the messages are usually quite little, tenths to two hundred bytes, there is no point in stablishing a persistent connection, like TCP does.
+
+### SMS
+SMS are also available in NBIoT and LTE-M. The combined attach procedure allows the UE to be able to receive and send SMS using the existing 3G infrastructure.
+
+
+## Remote eUICC provisioning
+
+### Requirements
+
+The modules & devices must accomplish some requirements to support remote eUICC provisionng. This information is in the Annex G of the GMSA Specification:
+
+Remote Provisioning Architecture for Embedded UICC 
+Technical Specification
+
+V3.1:
+[SGP.02 V3.1](https://www.gsma.com/iot/wp-content/uploads/2016/07/SGP.02_v3.1.pdf) annex G (Device Requirements)
+
+V3.2:
+[SGP.02 V3.2](https://www.gsma.com/newsroom/wp-content/uploads/SGP.02_v3.2_updated.pdf) annex G (Device Requirements)
+
+--Please, contact your module provider to check if it supports this requirements.--
+
+### Recomendations
+
+In order to perform SWAP procedure we recommend you to implement an “SWAP Mode”. In this mode the device does not enter in PSM (e.g. AT+CPSMS=0) and after the inactivity timer it enter IDLE mode and stays in it forever. This is necessary because in order to start the swap the module must receive a SMS in a short period of time. 
+In order to avoid malfunctions during/after the SWAP procedure we recommend not to configure APN neither PLMN:
+- Automatic APN selection: AT+CGDCONT=1,”IP”
+- Automatic PLMN selection: AT+COPS=0
+- Combined attach is mandatory.
+
+## Telefonica LPWA connectivity
+
+### Radio Access Network
+
+![pick](pictures/table_Telefonica_LPWA_RadioAccessNetwork.png)
+
+
+### Core Network
+
+![pick](pictures/table_Telefonica_LPWA_CoreNetwork.png)
+
+
+## Recipes
+
+### Smart meter pattern
+
+#### Pattern
+- Transmit 50 bytes every 24 hours
+- No other interaction
+
+#### Recommendation
+- Technology: NB-IoT
+- Behaviour: 
+  - Early Release+PSM 
+    - T3412 > 24 hours
+    - If device management is not necessary: T3324 = 0
+    - If device management is mandatory: T3324 != 0
+  - Switch On/Off module if early release is not available
+- Protocols:
+ - UDP messages via CP
+
+#### Projection (without the proposed DRX Inactivity Timer optimization)
+Assuming the perfect use of three Alkaline AA battery of 2,9Wh each:
+- 24 years
+
+#### Projection (with the proposed DRX Inactivity Timer optimization)
+Assuming the perfect use of one Alkaline AA battery of 2,9Wh each:
+- 26 years
+
+### Always on pattern
+
+#### Pattern
+The device must listen and receive short commands from the network. The device is available 24x7 but the commands can accept a 30’’ delay before executing.
+
+#### Recommendation
+- Technlogy: NBIoT/LTE-M
+- Behaviour:
+  - Set T3324 equal to T3412, and both to the maximum possible value (in order to minimize TAU updates). 
+  - Set eDRX timer depending on the max latency of your application
+- Protocols
+  - UDP/TCP when using LTE-M
+  - UDP when using NBIoT
+  
+#### Projection
+Assuming:
+- the perfect use of three Alkaline AA battery of 2,9Wh each
+- and one short command per day
+
+We’d expect a duration of:
+- 410 days
+
+The implementation of our recommendation on DRX Inactivity Timer does not affect this projection.
+
+### Massive data transfer pattern
+
+#### Pattern
+A certain device must transmit 1MB per day. The device can group data as it needs.
+
+#### Recommendation
+- Technology: Use LTE-M
+- Behaviour: 
+  - Move to PSM between connections.
+  - T3412 > 24 hours
+  - T3324 = 0
+- Protocols: Transmit all 1MB in the same connection.
+
+#### Projection
+Assuming:
+- the perfect use of three Alkaline AA battery of 2,9Wh each
+
+We’d expect a duration of:
+- 6,5 years
+
+The implementation of our recommendation on DRX Inactivity Timer would move this projection to 10 years
+
+
+### Movable devices
+
+#### Pattern
+
+A certain device is moving continuously sending its position plus further data.
+
+#### Recommendation
+- Technology: Use LTE-M
+- Behaviour: 
+  - Move to PSM between connections.
+  - T3412 > 1 hour
+  - T3324 = 30s
+- Protocols: 
+  - UDP
+
+### Remote setup
+
+#### Pattern
+A certain device should be configured, and it is not reachable.
+Recommendation
+- Technology: Use LTE-M/NBIoT
+- Protocols: 
+  - SMS-MT
