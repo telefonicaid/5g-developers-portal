@@ -255,29 +255,29 @@ In such a way the module can optimize its power consumption avoiding to lose tim
 
 ![pick](pictures/timers_summary.png)
 
-- **T3412: **
+- **T3412:**
 The module perform a TAU (Tracking Area Update) procedure. This value is proposed by the UE to the network, which is usually accepted but when this value is out of EPC limits the network will set a default value.
 
-- **T3324: **
+- **T3324:**
 The module stays in RRC Idle (DRX or eDRX) waiting for an incoming packet. This value is controlled by the UE.
 
-- **T3412 - T3324: **
+- **T3412 - T3324:**
 The module is in PSM mode, its current consumption is in the microamperes scale and the module is not reachable. 
 
-- **eDRX Cycle: **
+- **eDRX Cycle:**
 Time between paging windows the following table shows the available values in seconds. This value is negotiated between the module and the network.
 
 ![pick](pictures/table_eDRX_Cycle.png)
 
-- **Paging Window: **
+- **Paging Window:**
 The module is reachable during this time while in eDRX mode. These are the available values in seconds. This time in controller by the network.
 
 ![pick](pictures/table_Paging_Window.png)
 
-- **Inactivity Timer: **
+- **Inactivity Timer:**
 This timer is reset each the UE has an incoming or outcoming packet to/from the network. The module should stay in RRC Connected during this time after the last communication before entering RRC Idle. This timer is controlled by the network.
 
-- **DRX period: **
+- **DRX period:**
 Time between pagings in NBIoT (2,56s) and LTE-M (1,28s). This timer is controlled by the network.
 
 
@@ -331,9 +331,9 @@ Packets received by a layer are called Service Data Unit (SDU) while the packet 
 The control plane includes additionally the Radio Resource Control layer (RRC) which is responsible for configuring the lower layers.
 The control plane handles radio-specific functionality that depends on the state of the user equipment that includes two states: idle or connected.
 
-- **Idle: **
+- **Idle:**
 The user equipment camps on a cell after a cell selection or reselection process where factors like radio link quality, cell status and radio access technology are considered. The UE also monitors a paging channel to detect incoming calls and acquire system information. In this mode, control plane protocols include cell selection and reselection procedures.
-- **Connected: **
+- **Connected:**
 The UE supplies the E-UTRAN with downlink channel quality and neighbour cell information to enable the E-UTRAN to select the most suitable cell for the UE. In this case, control plane protocol includes the Radio Link Control (RRC) protocol.
 
 The protocol stack for the control plane between the UE and MME is shown below. The grey region of the stack indicates the access stratum (AS) protocols. The lower layers perform the same functions as for the user plane with the exception that there is no header compression function for the control plane.
@@ -431,11 +431,9 @@ In order to avoid malfunctions during/after the SWAP procedure we recommend not 
 
 ![pick](pictures/table_Telefonica_LPWA_RadioAccessNetwork.png)
 
-
 ### Core Network
 
 ![pick](pictures/table_Telefonica_LPWA_CoreNetwork.png)
-
 
 ## Recipes
 

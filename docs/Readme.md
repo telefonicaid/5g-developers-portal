@@ -48,8 +48,7 @@ Mobile IoT connectivity has now been deployed across Europe, North America and E
 
 ### LPWAN: LTE-M vs NBIoT
 
-![pick](pictures/ltem_logo.png)
-![pick](pictures/nb_logo.png)
+![pick](pictures/ltem_LPWA.png)
 
 LTE-M extends LTE with features for improved support for Machine-Type Communications (MTC) and IoT.
 The objective of LTE-M was to bring down the LTE device cost substantially to make LTE attractive for low end MTC applications that have so far been
