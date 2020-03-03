@@ -132,7 +132,11 @@ UE is said to be in RRC_IDLE mode when it is not connected to eNB, still the net
 After the initial power-on sequence, the UE will perform limited functionality in IDLE mode hence saves lot of battery power. 
 UE is paged for DL traffic but for UL traffic the UE will no longer be in IDLE state, it will move to the connected state.
 
-!!!!!!  limited_power_consumption_idrx.png
+<p align="center">
+	<a align="center">
+		<img src="pictures/limited_power_consumption_idrx.png">
+	</a>
+</p>
 
 In LTE, just as in most other modern wireless standards, there are shared uplink and downlink radio channels, the access to which is controlled by the RRC. 
 When in a RRC_CONNECTED state, the RRC tells each and every device which timeslots are assigned to whom, which transmit power must be used, modulation, 
@@ -140,24 +144,39 @@ plus a dozen other variables.
 If the mobile device does not have an assignment for these resources by the RRC, then it cannot transmit or receive any user data. 
 Consequently, when in a DRX state, the device is synchronized to the RRC, but no uplink or downlink resources are allocated to it: the device is “half awake.”
 
-
-!!!!!! limited_power_consumption_idrx_t.png
+<p align="center">
+	<a align="center">
+		<img src="pictures/limited_power_consumption_idrx_t.png">
+	</a>
+</p>
 
 ### C-DRX
 This feature allow the UE to optimize its power consumption while active wait of incoming messages is being performed. 
 It works in a similar way than I-DRX, but during the RRC_CONNECTED status, as showed in the following figures:
 
-!!!!! limited_power_consumption_cdrx.png
+<p align="center">
+	<a align="center">
+		<img src="pictures/limited_power_consumption_cdrx.png">
+	</a>
+</p>
 
 In addition to I-DRX, LTE had RRC mode DRX as well also known as Connected Mode DRX (C-DRX), the purpose of both the DRX is same to conserve the battery power. 
 During RRC connected state when there is no data transmission in either direction (UL/DL) UE goes into the DRX mode. 
 It starts monitoring the PDCCH channel discontinuously in other words UE is in sleep and wake cycle.
 
-!!!!!!!! limited_power_consumption_cdrx_t.png
+<p align="center">
+	<a align="center">
+		<img src="pictures/limited_power_consumption_cdrx_t.png">
+	</a>
+</p>
 
 Without the DRX the UE needs to monitor PDCCH in every subframe to check if there is downlink data available which drains the battery fast.
 
-!!!!!!!!!!! limited_power_consumption_cdrx_t2.png
+<p align="center">
+	<a align="center">
+		<img src="pictures/limited_power_consumption_cdrx_t2.png">
+	</a>
+</p>
 
 There are also three sub status when in RRC_CONNECTED:
 - **Continuous reception** Highest power state, established network context, allocated network resources.
@@ -211,7 +230,11 @@ This timer controls the duty cycle of the eDRX mode. This time can be configured
 
 Please refer to the “Timer Sumary” for further details.
 
-!!!!!!!!!!  limited_power_consumption_edrx_t2.png
+<p align="center">
+	<a align="center">
+		<img src="pictures/limited_power_consumption_edrx_t2.png">
+	</a>
+</p>
 
 In the following figure the DRX mode is disabled, which means, that the UE does not enter PSM but it do perform TAU procedure periodically. 
 A UE using PSM is available for mobile terminating services only for the period of an Active Time after a mobile originated event like data transfer or 
@@ -225,7 +248,11 @@ This is newly added feature in Release 12 and is specified in 3GPP 24.301-5.3.11
 but the UE remains registered with the network. No need to re-attach or re-establish PDN connections. 
 A UE in PSM is not immediately reachable for mobile terminating services.
 
-!!!!!!!!!!!! limited_power_consumption_psm.png
+<p align="center">
+	<a align="center">
+		<img src="pictures/limited_power_consumption_psm.png">
+	</a>
+</p>
 
 Whilst it has always been possible for a device’s application to turn its radio module off to save battery power, the device would subsequently have to reattach to the network when the radio module was turned back on. The reattach procedure consumes a small amount of energy, but the cumulative energy consumption of reattaches can become significant over the lifetime of a device. Therefore, battery life could be extended if this procedure could be avoided.
 
