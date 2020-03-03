@@ -76,7 +76,6 @@ improvements over GPRS as well as for enabling long battery lifetime. NBIoT has 
 | VOICE | Yes | No |
 
 
-
 NBIoT is recommended when devices are massive and static. But when dealing with moving devices it is recommended to use a multi-technology 
 NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 
@@ -84,9 +83,6 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 
 [Kite Platform](Kite_Platform.md)
 
-<div align="center">
-    <h4>Activate your SIM</h4>
-</div>
 <p align="center">
     <a href="#/easym2m.md#activate-your-sim" align="center" border="10">
         <img src="pictures/Telefonica_SIM.png"
@@ -104,7 +100,7 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 		</a>
 	</th>
 	<th>
-		<img src="pictures/portfolio/portfolio_white.png" width="1" height="1">
+		<img src="pictures/Telefonica_SIM.png" width="1" height="1">
 	</th>
 	<th>
 		<a href="#/Arduino_StarterKit.md" align="center">
@@ -115,14 +111,14 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
   <tr>
 	<th>
 		<a href="#/RaspberryPi_StarterKit.md" align="center">
-			<img src="pictures/portfolio/portfolio-Raspberry-Kit.png"
+			<img src="pictures/Telefonica_SIM.png"
 			width="300" height="200">
 		</a>
 	</th>
 	<th></th>
 	<th>
 		<a href="#/Arduino_StarterKit.md" align="center">
-			<img src="pictures/portfolio/portfolio-Arduino-Kit.png"
+			<img src="pictures/Telefonica_SIM.png"
 			width="300" height="200">
 		</a>
 	</th>
@@ -144,14 +140,14 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
   <tr>
 	<th>
 		<a href="#/RaspberryPi_HAT.md" align="center">
-			<img src="pictures/portfolio/portfolio-Raspberry-AWS.png"
+			<img src="pictures/Telefonica_SIM.png"
 			width="300" height="200">
 		</a>
 	</th>
 	<th></th>
 	<th>
 		<a href="#/Arduino_AWS.md" align="center">
-			<img src="pictures/portfolio/portfolio-Arduino-AWS.png"
+			<img src="pictures/Telefonica_SIM.png"
 			width="300" height="200">
 		</a>
 	</th>
@@ -173,14 +169,14 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
   <tr>
 	<th>
 		<a href="#/references/RaspberryPi_1Click.md" align="center">
-			<img src="pictures/portfolio/portfolio-Raspberry-1Click.png"
+			<img src="pictures/Telefonica_SIM.png"
 			width="300" height="200">
 		</a>
 	</th>
 	<th></th>
 	<th>
 		<a href="#/references/Telefonica_How_to_NBIoT.md.md" align="center">
-			<img src="pictures/portfolio/portfolio-Arduino-GCP.png"
+			<img src="pictures/Telefonica_SIM.png"
 			width="300" height="200">
 		</a>
 	</th>
