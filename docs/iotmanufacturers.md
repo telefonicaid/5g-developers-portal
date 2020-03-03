@@ -1,6 +1,6 @@
 # Telefónica Tech IoT and Device Manufacturers
 
-![pick](pictures/app-business-connection-221185.R..jpg)
+![pick](pictures/app-business-connection-221185.R.jpg)
 
 ## Register
 

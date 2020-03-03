@@ -88,12 +88,6 @@ There are a set of techniques that can be used in order to optimize the power co
 
 These functionalities are directly related with the status of the RRC link. AS you can see in the following figure there are four different status. RRC Connected, RRC Idle, PSM and Power Off.
 
-
-<p align="center">
-	<a align="center">
-		<img src="pictures/limited_power_consumption.png">
-	</a>
-</p>
 ![pick](pictures/limited_power_consumption.png)
 
 A UE is in RRC_CONNECTED when an RRC connection is established. If no RRC connection is established the UE is in RRC_IDLE mode. When the device is in IDLE state, it is only listening to control channel broadcasts, such as paging notifications of inbound traffic, or connected, in which case the network has an established context and resource assignment for the client. When in RRC_IDLE, the device cannot send or receive any data. To do so, it must first synchronize itself to the network by listening to the network broadcasts and then issue a request to the RRC to be moved to the RRC_CONNECTED.
@@ -142,6 +136,7 @@ UE is paged for DL traffic but for UL traffic the UE will no longer be in IDLE s
 		<img src="pictures/limited_power_consumption_idrx.png">
 	</a>
 </p>
+
 ![pick](pictures/limited_power_consumption_idrx.png)
 
 In LTE, just as in most other modern wireless standards, there are shared uplink and downlink radio channels, the access to which is controlled by the RRC. 
@@ -424,7 +419,7 @@ The standard defines Non IP Access. The support of Non-IP Data Delivery (NIDD) i
 
 SCEF provides:
 SMALL DATA TRANSFERS INTERFACE. SCEF is the interface for small data transfers and control messaging between Enterprises and the Operators Core Network.
-EXPOSE NETWORK CAPABILITIES VIA API. SCEF can communicate monitoring events to the customer ASs:
+EXPOSE NETWORK CAPABILITIES VIA API. SCEF can communicate monitoring events to the customer AS:
 - UE reachability
 - UE loss of connectivity
 - Location of the UE
