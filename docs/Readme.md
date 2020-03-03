@@ -95,7 +95,7 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 <table style="width:90%" align="center">
   <tr>
 	<th>
-		<a href="#/RaspberryPi_StarterKit.md" align="center" >
+		<a href="#/Mobile_IoT_Developer_Guide.md#functionalities-for-limited-power-consumption" align="center" >
 			How to reduce Power Consumption
 		</a>
 	</th>
