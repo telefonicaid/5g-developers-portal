@@ -179,8 +179,38 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 		</a>
 	</th>
   </tr>
+  </tr>
+    <tr></tr>
+    <tr>
+	<th>
+		<a href="#/Telefonica_M2M-IoT_Device_Behaviour_Requirements.md" align="center">
+			Device Behaviour Requirements
+		</a>
+	</th>
+	<th></th>
+	<th>
+		<a href="#/Telefonica_How_to_NBIoT.md" align="center">
+			Telefonica NB IoT Connectivity
+		</a>
+	</th>
+  </tr>
+  <tr>
+	<th>
+		<a href="#/Telefonica_M2M-IoT_Device_Behaviour_Requirements.md" align="center">
+			<img src="pictures/Telefonica_SIM.png"
+			width="300" height="200">
+		</a>
+	</th>
+	<th></th>
+	<th>
+		<a href="#/Telefonica_How_to_NBIoT.md.md" align="center">
+			<img src="pictures/18288.jpg"
+			width="300" height="200">
+		</a>
+	</th>
+  </tr>
 </table>
 
 
-
+[![banner](pictures/banner_telefonica_iotmanufacturers.jpg)](iotmanufacturers.md)
 

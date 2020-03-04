@@ -616,7 +616,6 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
 
 - [ ] **(no cause, detach type 2)**
-- [ ] **(no cause, detach type 2)**
   - **Message:** DETACH REQUEST
   - **Technology:** 
   - **Network:** 2G/3G
