@@ -101,21 +101,21 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 		<img src="pictures/Telefonica_SIM.png" width="1" height="1">
 	</th>
 	<th>
-		<a href="#/Arduino_StarterKit.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#coverage-enhancement" align="center">
 			How to enhance coverage
 		</a>
 	</th>
   </tr>
   <tr>
 	<th>
-		<a href="#/RaspberryPi_StarterKit.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#functionalities-for-limited-power-consumption" align="center">
 			<img src="pictures/14829.jpg"
 			width="300" height="200">
 		</a>
 	</th>
 	<th></th>
 	<th>
-		<a href="#/Arduino_StarterKit.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#coverage-enhancement" align="center">
 			<img src="pictures/2373.jpg"
 			width="300" height="200">
 		</a>
@@ -124,27 +124,27 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
   <tr></tr>
   <tr>
 	<th>
-		<a href="#/RaspberryPi_StarterKit.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#connection-architectures" align="center">
 			Connection Plane vs User Plane
 		</a>
 	</th>
 	<th></th>
 	<th>
-		<a href="#/Arduino_AWS.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#communication-protocols-network-protocols" align="center">
 			Non IP
 		</a>
 	</th>
   </tr>
   <tr>
 	<th>
-		<a href="#/RaspberryPi_HAT.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#connection-architectures" align="center">
 			<img src="pictures/150.jpg"
 			width="300" height="200">
 		</a>
 	</th>
 	<th></th>
 	<th>
-		<a href="#/Arduino_AWS.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#communication-protocols-network-protocols" align="center">
 			<img src="pictures/disrupt.jpg"
 			width="300" height="200">
 		</a>
@@ -153,27 +153,27 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
     <tr></tr>
     <tr>
 	<th>
-		<a href="#/RaspberryPi_1Click.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#remote-euicc-provisioning" align="center">
 			Remote eUICC provisioning
 		</a>
 	</th>
 	<th></th>
 	<th>
-		<a href="#/Telefonica_How_to_NBIoT.md" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#telefonica-lpwa-connectivity" align="center">
 			TEF LPWA networks details
 		</a>
 	</th>
   </tr>
   <tr>
 	<th>
-		<a href="#/references/RaspberryPi_1Click.md" align="center">
-			<img src="pictures/Telefonica_SIM.png"
+		<a href="#/references/Mobile_IoT_Developer_Guide.md#remote-euicc-provisioning" align="center">
+			<img src="pictures/portfolio_eUICC.jpg"
 			width="300" height="200">
 		</a>
 	</th>
 	<th></th>
 	<th>
-		<a href="#/references/Telefonica_How_to_NBIoT.md.md" align="center">
+		<a href="#/references/Mobile_IoT_Developer_Guide.md#telefonica-lpwa-connectivity" align="center">
 			<img src="pictures/18288.jpg"
 			width="300" height="200">
 		</a>
@@ -197,19 +197,22 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
   <tr>
 	<th>
 		<a href="#/Telefonica_M2M-IoT_Device_Behaviour_Requirements.md" align="center">
-			<img src="pictures/Telefonica_SIM.png"
+			<img src="pictures/portfolio_Requirements.jpg"
 			width="300" height="200">
 		</a>
 	</th>
 	<th></th>
 	<th>
-		<a href="#/Telefonica_How_to_NBIoT.md.md" align="center">
-			<img src="pictures/18288.jpg"
+		<a href="#/Telefonica_How_to_NBIoT.md" align="center">
+			<img src="pictures/portfolio_NBIoT.jpg"
 			width="300" height="200">
 		</a>
 	</th>
   </tr>
 </table>
+
+
+
 
 
 [![banner](pictures/banner_telefonica_iotmanufacturers.jpg)](iotmanufacturers.md)
