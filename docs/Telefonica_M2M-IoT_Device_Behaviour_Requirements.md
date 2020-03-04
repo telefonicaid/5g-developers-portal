@@ -307,10 +307,7 @@ If your module is not certified by Telefónica you may still follow the above bu
 
 ## Annex A	GSM/UMTS Cause Code 
 
-  - **Message:**
-  - **Technology:**
-  - **Network:**
-  - **Expected Result:**
+
 
 
 - #2 IMSI unknown in HLR/HSS
@@ -337,4 +334,300 @@ The DuT can keep attached to CS services.
 In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
     - Reboots are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
 
+- #7 GPRS/EPS Service Not Allowed
+  - **Message:** ATTACH REJECT
+  - **Technology:** 2G/3G
+  - **Network:** VPLMN
+  - **Expected Result:** 
+According to 3GPP TS 24.008 (2G/3G)  after receiving a ATTACH REJECT with cause #7 (GPRS services not allowed) in VPLMN:
+    - The DuT shall consider SIM/USIM invalid for GPRS services and NO ATTACH REQUEST or ROUTING AREA UPDATE REQUEST shall be done until a reboot occurs.
+The DuT can keep attached to CS services. 
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - Reboots are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
+
+- #8 Operator Determined Barring
+  - **Message:** DEACTIVATE  PDP CONTEXT REQUEST
+  - **Technology:** 2G/3G
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) after receiving a DEACTIVATE PDP CONTEXT REQUEST message with cause #8  (Operator determined barring):
+    - The DuT shall deactivate the PDP context and send a DETACH ACCEPT message to the network.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - Reboots are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
+
+- #10 Implicitly detached
+  - **Message:** DETACH REQUEST FROM THE NETWORK
+  - **Technology:** 4G
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving a DETACH REQUEST FROM THE NETWORK  with cause #10 (Implicitily detached):
+    - The DuT shall retry once a new attach procedure and reactivate the previous PDP context or PDN connectivity.
+
+- #10 Implicitly detached
+  - **Message:** SERVICE REJECT
+  - **Technology:** 4G
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving a SERVICE REJECT with cause #10 (Implicitily detached):
+    - The DuT shall retry once a new attach procedure and reactivate the previous PDP context or PDN connectivity.
+
+- #10 Implicitly detached
+  - **Message:** SMS CP Data with RP Error cause #10 ( "Implicitly detached") 
+  - **Technology:** 
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+
+- #11 PLMN not allowed
+  - **Message:** ATTACH REJECT
+  - **Technology:** 2G/3G
+  - **Network:** HPLMN
+  - **Expected Result:**
+According to 3GPP  TS 24.008 (2G/3G) after receiving an ATTACH REJECT with cause #11 (PLMN not allowed) in the HPLMN
+    - The DuT shall search for a suitable cell in another location area or tracking area.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - LOCATION UPDATING REQUEST or  ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST retries shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomised and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+According to 3GPP TS 23.122:
+    - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
+
+- #11 PLMN not allowed
+  - **Message:** ATTACH REJECT
+  - **Technology:** 2G/3G
+  - **Network:** VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) after receiving an  ATTACH REJECT with cause #11 (PLMN not allowed) in the VPLMN:
+    - The DuT shall store the current PLMN in list of "forbidden PLMN list" and NO LOCATION UPDATING REQUEST or  ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST  shall be done in the same PLMN until a reboot occurs.
+    - The DuT shall perform a new PLMN selection.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
+    - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours
+
+- #11 PLMN not allowed
+  - **Message:** SERVICE REJECT
+  - **Technology:** 4G
+  - **Network:** HPLMN
+  - **Expected Result:**
+According to 3GPP  TS 24.008 (2G/3G)  and TS 24.301 (LTE) after receiving an SERVICE REJECT with cause #11 (PLMN not allowed) in the HPLMN
+    - The DuT shall search for a suitable cell in another location area or tracking area.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - LOCATION UPDATING REQUEST or  ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST retries shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomised and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+According to 3GPP TS 23.122:
+    - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
+
+- #11 PLMN not allowed
+  - **Message:** SERVICE REJECT
+  - **Technology:** 4G
+  - **Network:** VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE)  after receiving an SERVICE REJECT with cause #11 (PLMN not allowed) in the VPLMN:
+    - The DuT shall store the current PLMN in list of "forbidden PLMN list" and NO LOCATION UPDATING REQUEST or  ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST  shall be done in the same PLMN until a reboot occurs.
+    - The DuT shall perform a new PLMN selection.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
+    - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
+
+- #14 GPRS services not allowed in this PLMN
+  - **Message:** ATTACH REJECT
+  - **Technology:** 2G/3G
+  - **Network:** HPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) after receiving ATTACH REJECT with cause #14 (GPRS services not allowed in this PLMN) in the HPLMN:
+    - The DuT shall not send any ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST in the same PLMN until a reboot occurs.
+    - The DuT shall perform a new PLMN selection.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
+    - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
+
+According to 3GPP TS 23.122:
+    - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
+
+- #14 GPRS services not allowed in this PLMN
+  - **Message:** ATTACH REJECT
+  - **Technology:** 2G/3G
+  - **Network:** VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) after receiving an ATTACH REJECT with cause #14 (GPRS services not allowed in this PLMN) in the VPLMN:
+    - The DuT shall store the current PLMN in list of "forbidden PLMNs for GPRS service" and NO ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST shall be done in the same PLMN until a reboot occurs.
+    - The DuT shall perform a new PLMN selection.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
+    - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
+
+- #14 GPRS services not allowed in this PLMN
+  - **Message:** SERVICE REJECT
+  - **Technology:** 4G
+  - **Network:** HPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE)  after receiving an SERVICE REJECT with cause #14 (GPRS services not allowed in this PLMN) in the HPLMN:
+    - The DuT shall not send any ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST  in the same PLMN until a reboot occurs.
+    - The DuT shall perform a new PLMN selection.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
+    - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
+
+According to 3GPP TS 23.122:
+    - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
+
+- #14 GPRS services not allowed in this PLMN
+  - **Message:** SERVICE REJECT
+  - **Technology:** 4G
+  - **Network:** VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE)  after receiving an SERVICE REJECT with cause #14 (GPRS services not allowed in this PLMN) in the VPLMN:
+    - The DuT shall store the current PLMN in list of "forbidden PLMNs for GPRS service" and NO ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST shall be done in the same PLMN until a reboot occurs.
+    - The DuT shall perform a new PLMN selection.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
+    - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
+
+[] #15 No Suitable Cells In Tracking/Location Area
+  - **Message:** ATTACH REJECT
+  - **Technology:** 4G
+  - **Network:** HPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving an ATTACH REJECT with cause #15 (No Suitable Cells In Location Area) in the HPLMN
+    - The DuT shall search for a suitable cell in another location area or tracking area.
+
+    - If the DuT is in NB-S1 mode and the Extended EMM cause IE with value "NB-IoT not allowed" is included in the TRACKING AREA UPDATE REJECT message, then the DuT may disable the NB-IoT capability and search for a suitable cell in E-UTRAN radio access technology.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - LOCATION UPDATING REQUEST or  ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST retries shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomised and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+According to 3GPP TS 23.122:
+    - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
+
+- #15 No Suitable Cells In Location Area
+  - **Message:** SERVICE REJECT
+  - **Technology:** 2G/3G/4G
+  - **Network:** HPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving an SERVICE REJECT with cause #15 (No Suitable Cells In Location Area) in the HPLMN
+    - The DuT shall search for a suitable cell in another location area or tracking area.
+
+    - If the DuT is in NB-S1 mode and the Extended EMM cause IE with value "NB-IoT not allowed" is included in the TRACKING AREA UPDATE REJECT message, then the DuT may disable the NB-IoT capability and search for a suitable cell in E-UTRAN radio access technology.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - LOCATION UPDATING REQUEST or  ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST retries shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomised and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+According to 3GPP TS 23.122:
+    - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
+
+- #15 No Suitable Cells In Location Area
+  - **Message:** SERVICE REJECT
+  - **Technology:** 2G/3G/4G
+  - **Network:** VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving an SERVICE REJECT with cause #15 (No Suitable Cells In Location Area) in the HPLMN
+    - The DuT shall store the current LAI in list of "forbidden location areas for roaming" and shall search for a suitable cell in another location area or tracking area.
+
+    - If the DuT is in NB-S1 mode and the Extended EMM cause IE with value "NB-IoT not allowed" is included in the TRACKING AREA UPDATE REJECT message, then the DuT may disable the NB-IoT capability and search for a suitable cell in E-UTRAN radio access technology.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - LOCATION UPDATING REQUEST or  ATTACH REQUEST or ROUTING AREA UPDATE REQUEST or TRACKING AREA UPDATE REQUEST retries shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomised and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+According to 3GPP TS 23.122:
+    - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
+
+- #17 Network failure
+  - **Message:** LOCATION UPDATING REJECT
+  - **Technology:** 2G/3G
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+Steering of Roaming (SoR) is a standardized  procedure used by Telefonica to establich the preferred roaming partners over others.
+According to 3GPP  TS 24.008 (2G/3G) when Steering of Roaming is applied after receiving a LOCATION UPDATE REJECT with  cause #17 (Network Failure):
+    - The DuT shall retry the LOCATION UPDATE REQUEST at least 4 times at expiring timer T3211 or T3311 or T3411.
+    - After the DuT has received the fifth rejection with cause #17 (Network Failure), the DuT shall start a new PLMN search. The device shall not extend the PLMN selection by fallback to CS.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - If the DuT is connected to 2G or 3G shall retry LOCATION UPDATE REQUEST or ATTACH REQUEST or  ROUTING AREA UPDATE REQUEST with the following delay between accesses (delay between the two consecutive request messages):
+      - #1 to #2, #2 to #3, #3 to #4:    15 seconds < t < 25 seconds
+      - #4 to #5:     t < 480 seconds (8 min)
+
+    - If the DuT is connected to 4G (LTE or CIoT) shall retry ATTACH REQUEST or TRACKING AREA UPDATE REQUEST with the following delay between accesses (delay between the two consecutive request messages):
+      - #1 to #2, #2 to #3, #3 to #4:    10 seconds < t < 25 seconds
+      - #4 to #5:     t < 480 seconds (8 min)
+
+- #19 ESM failure
+  - **Message:** ATTACH REJECT
+  - **Technology:** 4G
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.301 (LTE) after receiving a ATTACH REJECT with cause #19 (ESM failure):
+    - The DuT shall perform 5 ATTACH REQUEST or PDN CONNECTIVITY REQUEST towards the same APN. Then the DuT shall wait T3402 (12 min) and then the DuT can optionally perform a PLMN selection procedure.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - ATTACH REQUEST or PDN CONNECTIVITY REQUEST shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+- #30 Activation/Request rejected, unspecified
+  - **Message:** DISCONECT
+  - **Technology:** GSM
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+
+- #33 Activation/Request rejected, unspecified
+  - **Message:** ACTIVATE PDP CONTEXT REJECT
+  - **Technology:** 2G/3G
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) after receiving a ACTIVATE PDP CONTEXT REJECT with cause #33  (Requested service option not subscribed):
+    - The DuT shall not send another  ACTIVATE PDP CONTEXT REQUEST until the back-off timer expires (typically default value 12 min) or until a reboot occurs.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - ACTIVATE PDP CONTEXT REQUEST shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+- #36 Regular PDP Context Deactivation
+  - **Message:** PDP CONTEXT DEACTIVATE REQUESTED BY THE NETWORK
+  - **Technology:** 2G/3G
+  - **Network:** HPLMN/VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) after receiving a DEACTIVATE PDP CONTEXT REQUEST message with cause #36  (Regular PDP Context Deactivation):
+    - The DuT shall deactivate the PDP contexts and send a DETACH ACCEPT message to the network.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - ACTIVATE PDP CONTEXT REQUEST are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+- #40 No EPS bearer context activated (detach type: re-attach not required)
+  - **Message:** DETACH REQUEST
+  - **Technology:** 4G
+  - **Network:** VPLMN
+  - **Expected Result:**
+According to 3GPP TS 24.301 (LTE) after receiving a DETACH REQUEST message with cause #40 No EPS bearer context activated (detach type: re-attach not required)::
+    - The DuT shall retry to attach to a 2G/3G available network or perform a PLMN selection.
+The DuT can keep attached to CS services.
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - ATTACH REQUEST shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
+
+- (no cause, detach type 2)
+  - **Message:** DETACH REQUEST
+  - **Technology:** 
+  - **Network:** 2G/3G
+  - **Expected Result:**
+According to 3GPP TS 24.008 (2G/3G) after receiving a DETACH REQUEST message with detach type indicating "re-attach required" or "re-attach not required" and no cause code:
+    - The DuT shall deactivate the PDP contexts and send a DETACH ACCEPT message to the network. 
+The DuT can keep attached to CS services. DUT shall initiate a GPRS attach or RAU as maximum, when T3302 expires (12 min by default).
+
+In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
+    - ATTACH REQUEST or ROUTING AREA UPDATE REQUEST are required to recover the full connectivity of the DuT and shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
+    - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
 
