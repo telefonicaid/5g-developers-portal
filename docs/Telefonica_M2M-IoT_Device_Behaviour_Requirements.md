@@ -307,10 +307,7 @@ If your module is not certified by Telefónica you may still follow the above bu
 
 ## Annex A	GSM/UMTS Cause Code 
 
-
-
-
-- #2 IMSI unknown in HLR/HSS
+- [ ] #2 IMSI unknown in HLR/HSS
   - **Message:** LOCATION UPDATING REJECT
   - **Technology:** 2G/3G
   - **Network:** HPLMN/VPLMN
@@ -322,7 +319,7 @@ The DuT could keep connected to GPRS services.
 In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
     - Reboots are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours
 
-- #7 GPRS/EPS Service Not Allowed
+- [ ] #7 GPRS/EPS Service Not Allowed
   - **Message:** DETACH REQUEST FROM THE NETWORK
   - **Technology:** 4G
   - **Network:** VPLMN
@@ -334,7 +331,7 @@ The DuT can keep attached to CS services.
 In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
     - Reboots are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
 
-- #7 GPRS/EPS Service Not Allowed
+- [ ] #7 GPRS/EPS Service Not Allowed
   - **Message:** ATTACH REJECT
   - **Technology:** 2G/3G
   - **Network:** VPLMN
@@ -346,7 +343,7 @@ The DuT can keep attached to CS services.
 In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
     - Reboots are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
 
-- #8 Operator Determined Barring
+- [ ] #8 Operator Determined Barring
   - **Message:** DEACTIVATE  PDP CONTEXT REQUEST
   - **Technology:** 2G/3G
   - **Network:** HPLMN/VPLMN
@@ -357,7 +354,7 @@ According to 3GPP TS 24.008 (2G/3G) after receiving a DEACTIVATE PDP CONTEXT REQ
 In addition to 3GPP standards, Telefonica requirements and guidelines also have to be followed:
     - Reboots are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
 
-- #10 Implicitly detached
+- [ ] #10 Implicitly detached
   - **Message:** DETACH REQUEST FROM THE NETWORK
   - **Technology:** 4G
   - **Network:** HPLMN/VPLMN
@@ -365,7 +362,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving a DETACH REQUEST FROM THE NETWORK  with cause #10 (Implicitily detached):
     - The DuT shall retry once a new attach procedure and reactivate the previous PDP context or PDN connectivity.
 
-- #10 Implicitly detached
+- [ ] #10 Implicitly detached
   - **Message:** SERVICE REJECT
   - **Technology:** 4G
   - **Network:** HPLMN/VPLMN
@@ -373,13 +370,13 @@ According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving a DETACH
 According to 3GPP TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving a SERVICE REJECT with cause #10 (Implicitily detached):
     - The DuT shall retry once a new attach procedure and reactivate the previous PDP context or PDN connectivity.
 
-- #10 Implicitly detached
+- [ ] #10 Implicitly detached
   - **Message:** SMS CP Data with RP Error cause #10 ( "Implicitly detached") 
   - **Technology:** 
   - **Network:** HPLMN/VPLMN
   - **Expected Result:**
 
-- #11 PLMN not allowed
+- [ ] #11 PLMN not allowed
   - **Message:** ATTACH REJECT
   - **Technology:** 2G/3G
   - **Network:** HPLMN
@@ -394,7 +391,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 According to 3GPP TS 23.122:
     - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
 
-- #11 PLMN not allowed
+- [ ] #11 PLMN not allowed
   - **Message:** ATTACH REJECT
   - **Technology:** 2G/3G
   - **Network:** VPLMN
@@ -407,7 +404,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
     - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours
 
-- #11 PLMN not allowed
+- [ ] #11 PLMN not allowed
   - **Message:** SERVICE REJECT
   - **Technology:** 4G
   - **Network:** HPLMN
@@ -422,7 +419,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 According to 3GPP TS 23.122:
     - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
 
-- #11 PLMN not allowed
+- [ ] #11 PLMN not allowed
   - **Message:** SERVICE REJECT
   - **Technology:** 4G
   - **Network:** VPLMN
@@ -435,7 +432,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
     - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
 
-- #14 GPRS services not allowed in this PLMN
+- [ ] #14 GPRS services not allowed in this PLMN
   - **Message:** ATTACH REJECT
   - **Technology:** 2G/3G
   - **Network:** HPLMN
@@ -451,7 +448,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 According to 3GPP TS 23.122:
     - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
 
-- #14 GPRS services not allowed in this PLMN
+- [ ] #14 GPRS services not allowed in this PLMN
   - **Message:** ATTACH REJECT
   - **Technology:** 2G/3G
   - **Network:** VPLMN
@@ -464,7 +461,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
     - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
 
-- #14 GPRS services not allowed in this PLMN
+- [ ] #14 GPRS services not allowed in this PLMN
   - **Message:** SERVICE REJECT
   - **Technology:** 4G
   - **Network:** HPLMN
@@ -480,7 +477,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 According to 3GPP TS 23.122:
     - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
 
-- #14 GPRS services not allowed in this PLMN
+- [ ] #14 GPRS services not allowed in this PLMN
   - **Message:** SERVICE REJECT
   - **Technology:** 4G
   - **Network:** VPLMN
@@ -493,7 +490,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - Reboots are required to recover the full connectivity of the DuT, if PLMN selection had not had success.
     - Reboots shall not be more frequent than once every 1 hour. It is recommend to follow a randomised and exponential delayed on time reboot scheme based on hours.
 
-[] #15 No Suitable Cells In Tracking/Location Area
+- [ ] #15 No Suitable Cells In Tracking/Location Area
   - **Message:** ATTACH REJECT
   - **Technology:** 4G
   - **Network:** HPLMN
@@ -510,7 +507,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 According to 3GPP TS 23.122:
     - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
 
-- #15 No Suitable Cells In Location Area
+- [ ] #15 No Suitable Cells In Location Area
   - **Message:** SERVICE REJECT
   - **Technology:** 2G/3G/4G
   - **Network:** HPLMN
@@ -527,7 +524,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 According to 3GPP TS 23.122:
     - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
 
-- #15 No Suitable Cells In Location Area
+- [ ] #15 No Suitable Cells In Location Area
   - **Message:** SERVICE REJECT
   - **Technology:** 2G/3G/4G
   - **Network:** VPLMN
@@ -544,7 +541,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 According to 3GPP TS 23.122:
     - The HPLMN (if the EHPLMN list is not present or is empty) or an EHPLMN (if the EHPLMN list is present) shall not be stored on the list of "forbidden PLMNs for GPRS service".
 
-- #17 Network failure
+- [ ] #17 Network failure
   - **Message:** LOCATION UPDATING REJECT
   - **Technology:** 2G/3G
   - **Network:** HPLMN/VPLMN
@@ -563,7 +560,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
       - #1 to #2, #2 to #3, #3 to #4:    10 seconds < t < 25 seconds
       - #4 to #5:     t < 480 seconds (8 min)
 
-- #19 ESM failure
+- [ ] #19 ESM failure
   - **Message:** ATTACH REJECT
   - **Technology:** 4G
   - **Network:** HPLMN/VPLMN
@@ -575,13 +572,13 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - ATTACH REQUEST or PDN CONNECTIVITY REQUEST shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
     - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
 
-- #30 Activation/Request rejected, unspecified
+- [ ] #30 Activation/Request rejected, unspecified
   - **Message:** DISCONECT
   - **Technology:** GSM
   - **Network:** HPLMN/VPLMN
   - **Expected Result:**
 
-- #33 Activation/Request rejected, unspecified
+- [ ] #33 Activation/Request rejected, unspecified
   - **Message:** ACTIVATE PDP CONTEXT REJECT
   - **Technology:** 2G/3G
   - **Network:** HPLMN/VPLMN
@@ -593,7 +590,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - ACTIVATE PDP CONTEXT REQUEST shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
     - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
 
-- #36 Regular PDP Context Deactivation
+- [ ] #36 Regular PDP Context Deactivation
   - **Message:** PDP CONTEXT DEACTIVATE REQUESTED BY THE NETWORK
   - **Technology:** 2G/3G
   - **Network:** HPLMN/VPLMN
@@ -605,7 +602,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - ACTIVATE PDP CONTEXT REQUEST are required to recover the full connectivity of the DuT (CS+PS) and shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
     - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
 
-- #40 No EPS bearer context activated (detach type: re-attach not required)
+- [ ] #40 No EPS bearer context activated (detach type: re-attach not required)
   - **Message:** DETACH REQUEST
   - **Technology:** 4G
   - **Network:** VPLMN
@@ -618,7 +615,7 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
     - ATTACH REQUEST shall not be more frequent than once every 1 minute and no more than 10 in 1 hour. It is recommended to follow a randomized and exponential delayed on time retry scheme based on minutes.
     - After 1 hour of retries, it is strongly recommended to reboot the module using a randomised and exponential delayed on time reboot scheme based on hours (instead of one based on minutes). Reboots shall not be more frequent than once every 1 hour.
 
-- (no cause, detach type 2)
+- [ ] (no cause, detach type 2)
   - **Message:** DETACH REQUEST
   - **Technology:** 
   - **Network:** 2G/3G
