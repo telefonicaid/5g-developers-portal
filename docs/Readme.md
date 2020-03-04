@@ -117,7 +117,7 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 	<th></th>
 	<th>
 		<a href="#/Arduino_StarterKit.md" align="center">
-			<img src="pictures/150.jpg"
+			<img src="pictures/2373.jpg"
 			width="300" height="200">
 		</a>
 	</th>
@@ -139,7 +139,7 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
   <tr>
 	<th>
 		<a href="#/RaspberryPi_HAT.md" align="center">
-			<img src="pictures/Telefonica_SIM.png"
+			<img src="pictures/150.jpg"
 			width="300" height="200">
 		</a>
 	</th>
