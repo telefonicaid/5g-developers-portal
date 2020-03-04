@@ -99,7 +99,7 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 		</a>
 	</th>
 	<th>
-		<img src="pictures/Telefonica_SIM.png" width="1" height="1">
+		<img src="pictures/14829.jpg" width="1" height="1">
 	</th>
 	<th>
 		<a href="#/Arduino_StarterKit.md" align="center">
