@@ -166,14 +166,14 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
   </tr>
   <tr>
 	<th>
-		<a href="#/references/Mobile_IoT_Developer_Guide.md#remote-euicc-provisioning" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#remote-euicc-provisioning" align="center">
 			<img src="pictures/portfolio_eUICC.jpg"
 			width="300" height="200">
 		</a>
 	</th>
 	<th></th>
 	<th>
-		<a href="#/references/Mobile_IoT_Developer_Guide.md#telefonica-lpwa-connectivity" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide.md#telefonica-lpwa-connectivity" align="center">
 			<img src="pictures/18288.jpg"
 			width="300" height="200">
 		</a>
