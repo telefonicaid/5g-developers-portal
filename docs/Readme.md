@@ -84,7 +84,7 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 
 <p align="center">
     <a href="#/easym2m.md#activate-your-sim" align="center" border="10">
-        <img src="pictures/Telefonica_SIM.png"
+        <img src="pictures/tomo.1.M-3722546-4.jpg"
         width="200" height="125">
     </a>
 </p>
