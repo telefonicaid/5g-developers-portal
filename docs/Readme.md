@@ -175,7 +175,7 @@ NBIoT/LTE-M solution to avoid coverage issues and to guarantee the services.
 	<th></th>
 	<th>
 		<a href="#/references/Telefonica_How_to_NBIoT.md.md" align="center">
-			<img src="pictures/Telefonica_SIM.png"
+			<img src="pictures/18288.jpg"
 			width="300" height="200">
 		</a>
 	</th>
