@@ -21,10 +21,10 @@ The possible central management server can only be connected to the device if it
 After the first packet sent, if no further communication is done, the server will be able to reach the device for a maximum of 25 minutes.
 Your server will need to allow Telefonica Public IP addresses in your firewall.
 
-
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 176.83.208.0/21&nbsp; &nbsp; &nbsp; &nbsp; 176.83.144.0/21&nbsp; &nbsp; &nbsp; &nbsp; 176.83.136.0/21&nbsp; &nbsp; &nbsp; &nbsp; 176.83.152.0/21
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 176.83.216.0/23&nbsp; &nbsp; &nbsp; &nbsp; 176.83.164.0/23&nbsp; &nbsp; &nbsp; &nbsp; 176.83.162.0/23&nbsp; &nbsp; &nbsp; &nbsp; 176.83.166.0/23
+
 
 ## NBIOT
 These are the NBIOT Network specific parameters:
