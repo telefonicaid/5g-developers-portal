@@ -1,2 +1,1 @@
-# 5g-developers-portal
-#294370
+# 5g developers portal
