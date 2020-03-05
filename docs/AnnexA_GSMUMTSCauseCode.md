@@ -14,16 +14,16 @@ In addition to 3GPP standards, Telefonica requirements and guidelines also have 
 
 ### #7 GPRS/EPS Service Not Allowed
 
-### Message
+#### Message
 DETACH REQUEST FROM THE NETWORK
 
-### Technology
-4G
+#### Technology
+4G 
 
-### Network
+#### Network
 VPLMN
 
-### Expected Result
+#### Expected Result
 
 According to 3GPP  TS 24.008 (2G/3G) and TS 24.301 (LTE) after receiving a DETACH REQUEST FROM THE NETWORK with cause #7 (EPS services not allowed) in VPLMN: 
 
