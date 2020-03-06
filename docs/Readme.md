@@ -147,6 +147,22 @@ etc for some specific use cases to try to accelerate implementation of the custo
   </tr>
 </table>
 
+## Telefonica M2M-IoT Device Behaviour Requirements
+<p align="center">
+    <a href="#/Telefonica_M2M-IoT_Device_Behaviour_Requirements.md" align="center" border="10">
+        <img src="pictures/portfolio_Requirements.jpg" width= 30% height= auto  >
+    </a>
+</p>
+
+
+## NB-IoT Network Parameters
+<p align="center">
+    <a href="#/Telefonica_How_to_NBIoT" align="center" border="10">
+        <img src="pictures/portfolio_NBIoT.jpg" width= 30% height= auto  >
+    </a>
+</p>
+
+
 ## Recipes
 
 <table>
