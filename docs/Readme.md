@@ -117,59 +117,47 @@ etc for some specific use cases to try to accelerate implementation of the custo
   </tr>
   </tr>
     <tr></tr>
-    <tr>
-	<th>
-		<a href="#/Telefonica_M2M-IoT_Device_Behaviour_Requirements.md" align="center">
-			Device Behaviour Requirements
-		</a>
-	</th>
-	<th></th>
-	<th>
-		<a href="#/Telefonica_How_to_NBIoT.md" align="center">
-			Telefonica NB IoT Connectivity
-		</a>
-	</th>
-  </tr>
-  <tr>
-	<th>
-		<a href="#/Telefonica_M2M-IoT_Device_Behaviour_Requirements.md" align="center">
-			<img src="pictures/portfolio_Requirements.jpg"
-			width="300" height="200">
-		</a>
-	</th>
-	<th></th>
-	<th>
-		<a href="#/Telefonica_How_to_NBIoT.md" align="center">
-			<img src="pictures/portfolio_NBIoT.jpg"
-			width="300" height="200">
-		</a>
-	</th>
-  </tr>
 </table>
+
+## Telefonica M2M-IoT Device Behaviour Requirements
+<p align="center">
+    <a href="#/Telefonica_M2M-IoT_Device_Behaviour_Requirements.md" align="center" border="10">
+        <img src="pictures/portfolio_Requirements.jpg" width= 30% height= auto  >
+    </a>
+</p>
+
+
+## NB-IoT Network Parameters
+<p align="center">
+    <a href="#/Telefonica_How_to_NBIoT" align="center" border="10">
+        <img src="pictures/portfolio_NBIoT.jpg" width= 30% height= auto  >
+    </a>
+</p>
+
 
 ## Recipes
 
 <table>
   <tr>
 	<th>
-		<a href="#/Mobile_IoT_Developer_Guide.md#smart-meter-pattern" align="center" >
+		<a href="#/Mobile_IoT_Developer_Guide_recipes.md#smart-meter-pattern" align="center" >
 			Smart meter
 		</a>
 	</th>
 	<th>
-		<a href="#/Mobile_IoT_Developer_Guide.md#always-on-pattern" align="center" >
+		<a href="#/Mobile_IoT_Developer_Guide_recipes.md#always-on-pattern" align="center" >
 			Always ON
 		</a>
 	</th>
   </tr>
 	<th>
-		<a href="#/Mobile_IoT_Developer_Guide.md#smart-meter-pattern" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide_recipes.md#smart-meter-pattern" align="center">
 			<img src="pictures/portfolio_smart_meter.jpg"
 			width="350" height="225">
 		</a>
 	</th>
 	<th>
-		<a href="#/Mobile_IoT_Developer_Guide.md#always-on-pattern" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide_recipes.md#always-on-pattern" align="center">
 			<img src="pictures/portfolio_always_on.jpg"
 			width="350" height="225">
 		</a>
@@ -177,24 +165,24 @@ etc for some specific use cases to try to accelerate implementation of the custo
   </tr>
   <tr>
 	<th>
-		<a href="#/Mobile_IoT_Developer_Guide.md#massive-data-transfer-pattern" align="center" >
+		<a href="#/Mobile_IoT_Developer_Guide_recipes.md#massive-data-transfer-pattern" align="center" >
 			Massive data transfer
 		</a>
 	</th>
 	<th>
-		<a href="#/Mobile_IoT_Developer_Guide.md#movable-devices" align="center" >
+		<a href="#/Mobile_IoT_Developer_Guide_recipes.md#movable-devices" align="center" >
 			Movable devices
 		</a>
 	</th>
   </tr>
   	<th>
-		<a href="#/Mobile_IoT_Developer_Guide.md#massive-data-transfer-pattern" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide_recipes.md#massive-data-transfer-pattern" align="center">
 			<img src="pictures/portfolio_massive_data_transfer.jpg"
 			width="350" height="225">
 		</a>
 	</th>
 	<th>
-		<a href="#/Mobile_IoT_Developer_Guide.md#movable-devices" align="center">
+		<a href="#/Mobile_IoT_Developer_Guide_recipes.md#movable-devices" align="center">
 			<img src="pictures/portfolio_movable_devices.jpg"
 			width="350" height="225">
 		</a>

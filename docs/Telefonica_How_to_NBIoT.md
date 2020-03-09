@@ -7,8 +7,8 @@
 ## PDP Connection:
 The PDP Connection will be IPv4 and when configuring the APN name you have two choices:
 - Set an empty APN: When attaching, the network will provide automatically the APN.
-e.g. AT+CGDCONT=1,”IP”
-- Manually set the APN, e.g. AT+CGDCONT=1,”IP”, “sm2ms.movistar.es”: 
+e.g. `AT+CGDCONT=1,”IP”`
+- Manually set the APN, e.g. `AT+CGDCONT=1,”IP”, “sm2ms.movistar.es”`
   - PDN Type: IPv4
   - PDN Name: “sm2ms.movistar.es”, 
   - PDN User: empty
@@ -32,7 +32,7 @@ These are the NBIOT Network specific parameters:
 - Inactivity timer: EC0 10s, EC1 15s, EC2 20s
 - PSM timer (T3412): Range: 1 -320h. Default 1h
 - Active timer (T3324): Range: 0 – 11160s. Default 180s.
-- eDRX: Not available in Demo Kits. Disable eDRX e.g. AT+CEDRXS=0,5
+- eDRX: Not available in Demo Kits. Disable eDRX e.g. `AT+CEDRXS=0,5`
 - SMS: Not available in Demo Kits.
 
 ## LTE-M
@@ -40,7 +40,7 @@ These are the NBIOT Network specific parameters:
 - Inactivity Timer: 10s
 - PSM timer (T3412): Range: 1 -320h. Default 1h
 - Active timer (T3324): Range: 0 – 11160s. Default 180s.
-- eDRX: Not available in Demo Kits. Disable eDRX e.g. AT+CEDRXS=0,4
+- eDRX: Not available in Demo Kits. Disable eDRX e.g. `AT+CEDRXS=0,4`
 - SMS: Available when using “Combined Attach”.
 
 # KITE Platform
