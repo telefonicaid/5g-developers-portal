@@ -12,7 +12,7 @@ If you want to get our latest news, please [register in our website](https://iot
 
 [Developer connectivity.](https://iot.telefonica.com/en/contact/) If you want to use Telefónica connectivity in your development, test or small project you can buy  SIMs through our local partners. If you are part of a start-up or SME our [IoT Activation initiative](https://iotactivation.wayra.co/) can boost your IoT solution development and accelerate your time to market.
 
-[Certified modules](https://iot.telefonica.com/en/contact/). When you are building a device, you can use a module certified for Telefónica. You can be 100% sure of the compatibility between the module and the network,
+[Certified modules](https://okapi.telefonica.com/iot_modules/). When you are building a device, you can use a module certified for Telefónica. You can be 100% sure of the compatibility between the module and the network,
 
 [TheThinx](https://iot.telefonica.com/en/about-us/the-thinx-iot-lab/). In this open lab device manufacturers can test any device for private LTE or public LTE-M/NB-IoT  networks
 
